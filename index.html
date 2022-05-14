@@ -9,7 +9,7 @@
   </head>
   <body>
     <h1>Covid-19 stats</h1>
-    <button class="region-btn" type="button">World</button>
+    <button class="region-btn" id="selected" type="button">World</button>
     <button class="region-btn" type="button" data-region="asia">Asia</button>
     <button class="region-btn" type="button" data-region="africa">
       Africa
@@ -20,18 +20,22 @@
     <button class="region-btn" type="button" data-region="europe">
       Europe
     </button>
-    <input type="text" />
-    <div class="result-container"></div>
-    <button class="changeType" data-type="line">Line</button>
-    <button class="changeType" data-type="bar">bar</button>
-    <button class="changeType" data-type="pie">pie</button>
+    <div class="search-container">
+      <input type="text" placeholder="enter country name" />
+      <div class="result-container"></div>
+    </div>
     <div class="chart-container">
       <canvas id="myChart"></canvas>
+      <hr />
+      <button class="changeType" id="selectedType" data-type="bar">Bar</button>
+      <button class="changeType" data-type="line">Line</button>
+      <button class="changeType" data-type="pie">Pie</button>
+      <button class="changeType" data-type="doughnut">Doughnut</button>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="./script.js"></script>
     <script src="./chart.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>

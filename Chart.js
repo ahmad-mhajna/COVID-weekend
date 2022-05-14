@@ -9,6 +9,10 @@ Changetypebutton.forEach((button) => {
 
 let myChart;
 function changetype(event) {
+  const previousbutton = document.querySelector("#selectedType");
+  const currentbutton = event.target;
+  previousbutton.id = "";
+  currentbutton.id = "selectedType";
   charttype = event.target.getAttribute("data-type");
   genChart();
 }
